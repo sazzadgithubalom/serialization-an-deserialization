@@ -1,0 +1,66 @@
+package com.alom;
+
+import java.io.Serializable;
+
+public class Address implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4447634506065855077L;
+
+	private int id;
+	private String addressLine1;
+	private String addressLine2;
+	private String city;
+	//transient field can not be a part of serialization process......
+	private transient String zipCode;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getAddressLine1() {
+		return addressLine1;
+	}
+	public void setAddressLine1(String addressLine1) {
+		this.addressLine1 = addressLine1;
+	}
+	public String getAddressLine2() {
+		return addressLine2;
+	}
+	public void setAddressLine2(String addressLine2) {
+		this.addressLine2 = addressLine2;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getZipCode() {
+		return zipCode;
+	}
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+	@Override
+	public String toString() {
+		return "Address [id=" + id + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", city="
+				+ city + ", zipCode=" + zipCode + "]";
+	}
+	public Address(int id, String addressLine1, String addressLine2, String city, String zipCode) {
+		super();
+		this.id = id;
+		this.addressLine1 = addressLine1;
+		this.addressLine2 = addressLine2;
+		this.city = city;
+		this.zipCode = zipCode;
+	}
+	public Address() {
+		super();
+	}
+
+	
+}
